@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+#define F first
+#define S second
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define all(x) x.begin(), x.end()
+#define vi vector<int>
+
+void IO(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+}
+
+int main() {
+    IO();
+    //freopen("diamond.in", "r", stdin);
+    //freopen("diamond.out", "w", stdout);
+    int n;
+    string str;
+    cin >> n >> str;
+    int a = 0, d = 0;
+    for(int i = 0; i < n; i++){
+        if(str[i] == 'A')   a++;
+        else d++;
+    }
+    if(a < d)   cout << "Danik";
+    else if(a > d)  cout << "Anton";
+    else    cout << "Friendship";
+}
